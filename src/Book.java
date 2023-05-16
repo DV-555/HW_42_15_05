@@ -36,20 +36,20 @@ public class Book implements Comparable<Book> {
         "author='" + author + '\'' +
         ", title='" + title + '\'' +
         ", numberOfPages=" + numberOfPages +
-        '}';
+        '}'+'\n';
   }
 
 
-  @Override
-  public int compareTo(Book o) {
-    // Сравнение по авторам
-    int authorComparison = this.author.compareTo(o.author);
-    if (authorComparison < 0) {
-      return -1; // Текущая книга должна быть перед другой
-    } else if (authorComparison > 0) {
-      // Текущая книга должна быть после другой
-    }
-    return 1; //return author.compareTo(o.author);
+ @Override
+ public int compareTo(Book o) {
+   // Сравнение по авторам
+   int authorComparison = this.author.compareTo(o.author);
+   if (authorComparison < 0) {
+     return -1; // Текущая книга должна быть перед другой
+   } else if (authorComparison > 0) {
+     // Текущая книга должна быть после другой
+   }
+   return 1; //return author.compareTo(o.author);
   }
 
 
