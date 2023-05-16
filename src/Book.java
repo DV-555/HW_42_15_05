@@ -42,8 +42,16 @@ public class Book implements Comparable<Book> {
 
   @Override
   public int compareTo(Book o) {
-    return author.compareTo(o.author);
+    // Сравнение по авторам
+    int authorComparison = this.author.compareTo(o.author);
+    if (authorComparison < 0) {
+      return -1; // Текущая книга должна быть перед другой
+    } else if (authorComparison > 0) {
+      // Текущая книга должна быть после другой
+    }
+    return 1; //return author.compareTo(o.author);
   }
+
 
   @Override
   public boolean equals(Object obj) {
