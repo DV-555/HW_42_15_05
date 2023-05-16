@@ -1,4 +1,6 @@
-public class Book implements Comparable<Book>{
+import java.util.Objects;
+
+public class Book implements Comparable<Book> {
 
 // Задача 1.
 // Создать класс Book (книга), в конструктор которого передавайте автора,
@@ -40,6 +42,19 @@ public class Book implements Comparable<Book>{
 
   @Override
   public int compareTo(Book o) {
-    return 0;
+    return author.compareTo(o.author);
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) {
+      return true;
+    }
+    return false;
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(author,title,numberOfPages);
   }
 }
