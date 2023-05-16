@@ -55,6 +55,6 @@ public class Book implements Comparable<Book> {
 
   @Override
   public int hashCode() {
-    return Objects.hash(author,title,numberOfPages);
+    return Objects.hash(author, title, numberOfPages);
   }
 }
